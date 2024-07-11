@@ -1,0 +1,12 @@
+class Car:
+  def __init__(self,name,model,year):
+    self.name = name
+    self.model = model
+    self.year = year
+
+  def info(self):
+    print(f"the car is {self.name} {self.model} {self.year}")
+
+ob1 = Car("Toyota","Corolla",2021)
+ob2 = Car("Tesla","New X",2023)
+ob1.info()
