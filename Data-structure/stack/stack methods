@@ -1,0 +1,33 @@
+class stack:
+  def __init__(self):
+    self.value = []
+
+  def push(self,data):
+    #self.value.append(data)
+    self.value = [data] + self.value
+
+  def pop(self):
+    if self.isEmpty():
+      print("the list is empty, nothing to pop")
+      return None
+    return self.value.pop(0)
+
+  def isEmpty(self):
+    return len(self.value) == 0
+
+  def length(self):
+    return len(self.value)
+
+s = stack()
+s.push(10)
+s.push(20)
+s.push(30)
+s.push(40)
+print(s.value)
+print(s.pop())
+s.pop()
+s.pop()
+s.pop()
+s.pop()
+s.pop()
+print(s.value)
