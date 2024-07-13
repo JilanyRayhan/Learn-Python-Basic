@@ -1,0 +1,29 @@
+class queue:
+  def __init__(self):
+    self.value = []
+
+  def enqueue(self,data):
+    self.value.append(data)
+
+  def dequeue(self):
+    front = self.value[0]
+    self.value = self.value[1:]
+    return front
+
+  def isEmpty(self):
+    return len(self.value) == 0
+  def length(self):
+    return len(self.value)
+
+q = queue()
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+print(q.value)
+#q.dequeue()
+print(q.dequeue())
+print(q.dequeue())
+print(q.dequeue())
+q.enqueue(40)
+print(q.value)
+print(q.dequeue())
