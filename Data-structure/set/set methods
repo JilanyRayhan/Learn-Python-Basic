@@ -1,0 +1,74 @@
+num = {2,5,27,2,6,}
+print(num)
+
+st = {"carla",19,"john",5.535,19}
+print(st)
+
+new = set()
+print(type(new))
+
+for item in new:
+  print(item)
+
+
+set1 = {"dhaka","natore","hobiganj","vola"}
+set2 = {"rajshahi","natore","dinajpur","dhaka"}
+
+print(set1.union(set2))
+print(set1.intersection(set2))
+#set1 didnot change
+print(set1)
+
+set3 = set1.union(set2)
+print(set3)
+
+#if we update,then s1 would change, there are nothing like union_update, we use only "update" for union update. but for update in intersection, we use intersection_update
+set1.update(set2)
+set2.intersection_update(set1)
+print(set1,set2)
+
+#symmetric_difference outputs the values that are not common in both sets. it means (set3.union(set4)) - (set3.intersection(set4))
+set3 = {3,5,6,8}
+set4 = {5,8,7,9}
+print(set3.symmetric_difference(set4))
+print((set3.union(set4)) - (set3.intersection(set4)))
+print(set3.difference(set4))
+print(set4.difference(set3))
+
+#Unlike difference, which returns a new set with elements from set1 that are not in set2, difference_update modifies set1 directly.
+set3.difference_update(set4)
+print(set3)
+
+set5 = {"rahim","karim","milon","sohel"}
+set6 = {"john","bob","milon","andrew"}
+set6.discard("milon")
+
+print(set5.isdisjoint(set6))
+
+s7 = {"mango","banana","coconut","watermelon","pineapple","kiwi"}
+s8 = {"banana","amla","kiwi"}
+s8.remove("amla")
+
+#set s7 is considered a superset of another set s8 if and only if all elements of s8 are also present in elements of s7 and subset is vice-versa
+print(s7.issuperset(s8))
+print(s8.issubset(s7))
+
+s9 = {4,6,9,10}
+print(s9)
+s9.add(7)
+print(s9)
+
+#Removes a specified element from the set.If the element is not found in the set, unlike discard(), it raises a KeyError.
+#s9.remove(5)
+
+s10 = {3,4,5,6,7}
+s10.clear()
+print(s10)
+del s10
+#print(s10)
+
+s11 = {6,7,5,4,3,43,63,87,334,22}
+print(s11)
+print(s11.pop())
+#print(pick)
+print(s11)
